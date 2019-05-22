@@ -403,7 +403,7 @@ router.post('/uploadimg', (req, res, next) => {
 
 // 保存关于数据
 router.post('/saveAbout', (req, res, next) => {
-    tool.setConfig(path.join(__dirname, '../config/about.json'), {
+    tool.setConfig(path.join(setConfig, '../config/about.json'), {
         FirstLine: req.body.FirstLine,
         SecondLine: req.body.SecondLine,
         PhotoPath: req.body.PhotoPath,

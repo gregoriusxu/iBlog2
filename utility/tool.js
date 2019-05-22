@@ -73,7 +73,9 @@ module.exports = {
                 data[key] = setters[key];
             }
             const newFile = JSON.stringify(data, null, 2);
-            fs.writeFile(filePath, newFile, 'utf8');
+            fs.writeFile(filePath, newFile, 'utf8', function(err, result) {
+                if(err) console.log('error', err);
+              });
         });
     },
 
